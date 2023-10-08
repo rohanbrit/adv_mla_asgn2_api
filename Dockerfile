@@ -10,4 +10,4 @@ COPY ./models /models
 
 COPY ./data /data
 
-CMD ["gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "-c", "/gunicorn_conf.py", "main:app", "--bind", "0.0.0.0:80", "--timeout", "300"]
+CMD ["gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "-c", "/gunicorn_conf.py", "main:app", "--timeout", "300"]
